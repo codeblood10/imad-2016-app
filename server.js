@@ -5,9 +5,10 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined')); 
 
-var articleOne   = { 
+var articles  = { 
+ 'article-one' : { 
     title:'Article one | ankit sharma', 
-    heading : 'article one' ,
+    heading : 'article-one' ,
     date : 'sep, 5,2016', 
     content : 
     `<p> 
@@ -19,14 +20,36 @@ var articleOne   = {
     <p> 
     this is my first article on my web page hosted on my very own url ok done 
     </p> `
+ }, 
+ 'article-two' : { 
+    title:'Article two | ankit sharma', 
+    heading : 'article two' ,
+    date : 'sep, 15,2016', 
+    content : 
+    `<p> 
+    this is my second article on my web page hosted on my very own url ok done 
+    </p>`
+   
+ } ,  
+ 'article-three' : { 
+    title:'Article three | ankit sharma', 
+    heading : 'article three' ,
+    date : 'sep, 10,2016', 
+    content : 
+    `<p> 
+    this is my third article on my web page hosted on my very own url ok done 
+    </p>`
     
+ }
+  
 };
 function createtemplate( data ) 
 { var title = data.title;
   var date = data.date; 
   var heading = data.heading; 
   var content = data.content;
-var htmltemplate = `<html> 
+var htmltemplate = `
+<html> 
 <head> 
  <title>  
    ${title} 
@@ -64,15 +87,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function (req, res){ 
-res.send(createtemplate(articleOne));
+app.get('/:articlename',function (req, res){ 
+    //articlename = article-one
+    //article[articlename]=={}content object for  article one  
+    var articlename = req.params.articlename;
+res.send(createtemplate(articles[articlename]));
 }); 
-app.get('/article-two',function(req,res){ 
-res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three',function(req,res){ 
-res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
