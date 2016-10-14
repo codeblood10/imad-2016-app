@@ -53,7 +53,7 @@ var htmltemplate = `<html>
 </body>
 </html>
 `; 
-return hmtltemplate;
+return htmltemplate;
 }
 
 
