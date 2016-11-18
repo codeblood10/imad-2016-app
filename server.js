@@ -125,7 +125,7 @@ app.get('/ui/fb.png', function (req, res) {
 });
 
 app.get('/ui/li.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.jpg'));
+  res.sendFile(path.join(__dirname, 'ui', 'li.png'));
 });
 
 app.get('/ui/gp.png', function (req, res) {
