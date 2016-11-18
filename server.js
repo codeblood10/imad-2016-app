@@ -103,7 +103,7 @@ app.get('/ui/home1.jpg', function (req, res) {
 });
  
 app.get('/ui/berry.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'berry.jpg')); 
+  res.sendFile(path.join(__dirname, 'ui', 'berry.png')); 
 });
 app.get('/ui/blog.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.png'));
