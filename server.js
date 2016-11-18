@@ -87,6 +87,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/ui/blog.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
+});
 app.get('/:articlename',function (req, res){ 
     //articlename = article-one
     //article[articlename]=={}content object for  article one  
