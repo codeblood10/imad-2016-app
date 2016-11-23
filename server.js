@@ -35,10 +35,10 @@ var htmltemplate = `
   </div> 
   <hr/> 
   <h3> 
-    toString (${heading}); 
+     ${heading} 
   </h3> 
   <div> 
-    ${date} 
+    ${date.toDateString()} 
   </div> 
   <div> 
      ${content}
