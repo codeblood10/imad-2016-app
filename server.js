@@ -13,44 +13,7 @@ var config = {
 var app = express();
 app.use(morgan('combined')); 
 
-var articles  = { 
- 'article-one' : { 
-    title:'Article one | ankit sharma', 
-    heading : 'article-one' ,
-    date : 'sep, 5,2016', 
-    content : 
-    `<p> 
-    this is my first article on my web page hosted on my very own url ok done 
-    </p>
-    <p> 
-    this is my first article on my web page hosted on my very own url ok done 
-    </p>
-    <p> 
-    this is my first article on my web page hosted on my very own url ok done 
-    </p> `
- }, 
- 'article-two' : { 
-    title:'Article two | ankit sharma', 
-    heading : 'article two' ,
-    date : 'sep, 15,2016', 
-    content : 
-    `<p> 
-    this is my second article on my web page hosted on my very own url ok done 
-    </p>`
-   
- } ,  
- 'article-three' : { 
-    title:'Article three | ankit sharma', 
-    heading : 'article three' ,
-    date : 'sep, 10,2016', 
-    content : 
-    `<p> 
-    this is my third article on my web page hosted on my very own url ok done 
-    </p>`
-    
- }
-  
-};
+
 function createtemplate( data ) 
 { var title = data.title;
   var date = data.date; 
@@ -113,7 +76,7 @@ app.get('/articles/:articlename',function (req, res){
     //articlename = article-one
     //article[articlename]=={}content object for  article one  
     var articlename = req.params.articlename; 
-   pool.query("SELECT * FROM article WHERE title ='"+req.params.articleName+"'" ,function(err,result){
+   pool.query("SELECT * FROM article WHERE title =$1",[req.params.articleName] ,function(err,result){
        if(err) 
        { 
            res.status(500).send(err.toString ());
