@@ -35,7 +35,7 @@ var htmltemplate = `
   </div> 
   <hr/> 
   <h3> 
-     ${heading} 
+    toString (${heading}); 
   </h3> 
   <div> 
     ${date} 
