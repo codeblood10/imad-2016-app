@@ -90,11 +90,10 @@ app.get('/articles/:articlename',function (req, res){
            else 
            { 
                var articlesData = result.rows[0];
-               res.send(createtemplate(articleData));
+               res.send(createtemplate(articlesData));
            }
        } 
      });
-res.send(createtemplate(articlesData));
 }); 
 
 app.get('/ui/style.css', function (req, res) {
