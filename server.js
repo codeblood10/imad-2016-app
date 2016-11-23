@@ -94,7 +94,7 @@ app.get('/articles/:articlename',function (req, res){
            }
        } 
      });
-res.send(createtemplate(articleData));
+res.send(createtemplate(articlesData));
 }); 
 
 app.get('/ui/style.css', function (req, res) {
