@@ -1,7 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;  
 
+var config = { 
+    user :'codeblood10', 
+    database : 'codeblood10', 
+    host : 'db.imad.hasura-app.io',
+    port : '5432', 
+    password :process.env.DB_PASSWORD
+};
 var app = express();
 app.use(morgan('combined')); 
 
@@ -80,21 +88,35 @@ return htmltemplate;
 }
 
 
-
+var pool =  new Pool(config);
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+ 
+app.get('/test-db',function(req,res){
+     pool.query('SELECT * FROM test',function(err,result){
+         if(err) 
+         { 
+             res.status(500).send(err.toString());
+         } else 
+         { 
+             res.send(JSON.stringfy(result.rows)); 
+         }
+     });
+}) ;
 app.get('/ui/blog.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
-app.get('/:articlename',function (req, res){ 
+app.get('/articles/:articlename',function (req, res){ 
     //articlename = article-one
     //article[articlename]=={}content object for  article one  
-    var articlename = req.params.articlename;
-res.send(createtemplate(articles[articlename]));
+    var articlename = req.params.articlename; 
+   // pool.query("SELECT * FROM article WHERE title ="+req.params.articleName 
+    
+ //   )
+res.send(createtemplate(articleData));
 }); 
 
 app.get('/ui/style.css', function (req, res) {
