@@ -148,8 +148,8 @@ var htmltemplate = `
                 follow on:
             </div>
             <div id="follow">
-                <a href="https://www.facebook.com/profile.php?id=100003604141055"><img src="fb.png"></a>&nbsp;&nbsp;
-                <a href="https://www.linkedin.com/in/ankit-sharma-9b600410b?trk=nav_responsive_tab_profile"><img src="li.png"></a>&nbsp;&nbsp;
+                <a href="https://www.facebook.com/profile.php?id=100003604141055"><img src="/ui/fb.png"></a>&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/ankit-sharma-9b600410b?trk=nav_responsive_tab_profile"><img src="/ui/li.png"></a>&nbsp;&nbsp;
                 <a href="https://plus.google.com/106373746361945588720"><img src="gp.png"></a>
             </div>
             <div id="copy">
