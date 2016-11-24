@@ -133,11 +133,11 @@ var htmltemplate = `
    </div> 
    <div class = "row"> 
    <div class = "col-md-12"> 
-      ${code} 
+    //  ${code} 
    </div>  
    <div class  ="row"> 
    <div class = "col-md-12"> 
-      ${ref} 
+    //  ${ref} 
    </div> 
 
    </div>
