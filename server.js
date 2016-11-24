@@ -113,7 +113,7 @@ var htmltemplate = `
 		</div>	
 		<div id="navbar">
             <ul>
-                <li> <a href = "/" ><span class="glyphicon glyphicon-home"></span></a></li>
+                <li> <a href = "/ui/blog.html" ><span class="glyphicon glyphicon-home"></span></a></li>
                 <li><a href="https://guides.github.com/activities/hello-world/">Github tutorial</a></li>
                 <li><a href="http://ourcodeworld.com/articles/read/200/top-7-best-free-web-development-ide-for-javascript-html-and-css">Top open sources ide's</a></li>
                 <li><a href="www.tutorialspoint.com/listtutorials/linux/1">Learn about linux</a></li>
