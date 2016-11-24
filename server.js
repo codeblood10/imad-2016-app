@@ -18,7 +18,9 @@ function createtemplate( data )
 { var title = data.title;
   var date = data.date; 
   var heading = data.heading; 
-  var content = data.content;
+  var content = data.content; 
+  var code = data.code;
+  var ref = data.ref;
 var htmltemplate = `
 <html> 
 <head> 
@@ -133,11 +135,11 @@ var htmltemplate = `
    </div> 
    <div class = "row"> 
    <div class = "col-md-12"> 
-    //  ${code} 
+     ${code} 
    </div>  
    <div class  ="row"> 
    <div class = "col-md-12"> 
-    //  ${ref} 
+     ${ref} 
    </div> 
 
    </div>
