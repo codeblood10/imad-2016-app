@@ -27,25 +27,138 @@ var htmltemplate = `
  </title> 
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link href = "/ui/style.css" ref = "stylesheet"  />
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <style> 
+    .footer{
+        background-color: black;
+        text-align: center;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom:5px;
+        margin-top:200px;
+    }
+    
+    #xoxo{
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    #copy{
+        padding-top: 10px;
+        font-weight: bold;
+    }
+    .container{
+	    margin-top:20px;
+	}
+	
+    .header{
+	    text-align:center;
+		font-size:25px;
+		font-weight:bold;
+	    font-family:cursive;
+     }
+	
+	.pope{
+	    text-align:center;
+		font-size:15px;
+		margin-bottom:30px;
+	}
+	
+	#navbar{
+        text-align: center;
+        font-size: 15px;
+        background-color: darkblue;
+        padding-top: 7px;
+        padding-bottom: 3px;
+    }
+	
+    #navbar ul{
+	    list-style-type:none;
+    }
+	
+    #navbar ul li{
+	   display:inline;
+	   padding:10px;
+    }
+    #navbar ul li a {
+	    text-decoration:none;
+	    color:white;
+    }
+	
+    #navbar ul li a:hover {
+	    color:#black;
+	    border-top:2px solid;
+	    border-bottom:2px solid;
+    }
+	
+	#image{
+	    margin-bottom:60px;
+	}
+  
+  </style>
 </head> 
 <body> 
-   <div class = "container">
-  <div> 
-  <a href = "/" >home</a> 
-  </div> 
+   <div class = "container" >
+    <div>
+		    <div  class="header">C.O.S.M.O.S</div>
+		    <div class="pope">Coding Open Source Methods Of Solution</div>
+		</div>	
+		<div id="navbar">
+            <ul>
+                <li> <a href = "/" ><span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a href="https://guides.github.com/activities/hello-world/">Github tutorial</a></li>
+                <li><a href="http://ourcodeworld.com/articles/read/200/top-7-best-free-web-development-ide-for-javascript-html-and-css">Top open sources ide's</a></li>
+                <li><a href="www.tutorialspoint.com/listtutorials/linux/1">Learn about linux</a></li>
+                <li><a href="https://summerofcode.withgoogle.com/">G-soc google summer of code</a></li> 
+                <li><a href ="https://opensource.com/resources/what-open-source">Open source technologies</a>
+            </ul>
+        </div> 
   <hr/> 
-  <h3> 
+  <h3 style ="text-align: center;"> 
      ${heading} 
   </h3> 
   <div> 
     ${date.toDateString()} 
   </div> 
-  <div> 
-     ${content}
+  <div class = "row"> 
+     <div class ="col-md-12"> 
+      ${content}
+   </div>  
    </div> 
+   <div class = "row"> 
+   <div class = "col-md-12"> 
+      ${code} 
+   </div>  
+   <div class  ="row"> 
+   <div class = "col-md-12"> 
+      ${ref} 
+   </div> 
+
+   </div>
+     <div class="footer"   >
+            <div id="xoxo">
+                follow on:
+            </div>
+            <div id="follow">
+                <a href="https://www.facebook.com/profile.php?id=100003604141055"><img src="fb.png"></a>&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/ankit-sharma-9b600410b?trk=nav_responsive_tab_profile"><img src="li.png"></a>&nbsp;&nbsp;
+                <a href="https://plus.google.com/106373746361945588720"><img src="gp.png"></a>
+            </div>
+            <div id="copy">
+                Copyright reserved @2016-17
+            </div>
+        </div>
+		
+		
    </div>
 </body>
-</html>
+</html>  
 `; 
 return htmltemplate;
 }
