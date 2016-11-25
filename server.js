@@ -130,16 +130,19 @@ var htmltemplate = `
     ${date.toDateString()} 
   </div> 
   <div class = "row"> 
-     <div class ="col-md-12"> 
+     <div class ="col-md-12">  
+     <h3>Description : </h3>
       ${content}
    </div>  
    </div> 
    <div class = "row"> 
    <div class = "col-md-12"> 
+   <h3>Code :</h3> 
      ${code} 
    </div>  
    <div class  ="row"> 
    <div class = "col-md-12"> 
+   <h3>References :</h3>
      ${ref} 
    </div> 
 
