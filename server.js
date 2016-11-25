@@ -187,7 +187,7 @@ app.get('/test-db',function(req,res){
 app.get('/ui/blog.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
-app.get('/articles/:articlename',function (req, res){ 
+app.get('/ui/articles/:articlename',function (req, res){ 
     //articlename = article-one
     //article[articlename]=={}content object for  article one  
     var articlename = req.params.articlename; 
