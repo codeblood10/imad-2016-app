@@ -107,7 +107,7 @@ var htmltemplate = `
 </head> 
 <body> 
    <div class = "container" >
-    <div>
+      <div>
 		    <div  class="header">C.O.S.M.O.S</div>
 		    <div class="pope">Coding Open Source Methods Of Solution</div>
 		</div>	
@@ -139,10 +139,11 @@ var htmltemplate = `
    <div class = "col-md-12"> 
    <h3>Code :</h3> 
       ${code} 
-   </div>  
+   </div> 
+   </div>
    <div class  ="row"> 
    <div class = "col-md-12"> 
-     <h3>References :</h3>
+    &nbsp;<h3>References :</h3>
         ${ref} 
    </div> 
 
