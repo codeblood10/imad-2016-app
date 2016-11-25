@@ -138,12 +138,12 @@ var htmltemplate = `
    <div class = "row"> 
    <div class = "col-md-12"> 
    <h3>Code :</h3> 
-     ${code} 
+      ${code} 
    </div>  
    <div class  ="row"> 
    <div class = "col-md-12"> 
    <h3>References :</h3>
-     ${ref} 
+      ${ref} 
    </div> 
 
    </div>
