@@ -248,8 +248,8 @@ app.get('/ui/gp.png', function (req, res) {
 app.get('/ui/js.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'js.jpg'));
 });
-app.get('/ui/c+.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'c+.jpg'));
+app.get('/ui/comp.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'comp.png'));
 });
 app.get('/ui/andriod.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'andriod.jpg'));
