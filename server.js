@@ -142,8 +142,8 @@ var htmltemplate = `
    </div>  
    <div class  ="row"> 
    <div class = "col-md-12"> 
-   <h3>References :</h3>
-      ${ref} 
+     <h3>References :</h3>
+        ${ref} 
    </div> 
 
    </div>
