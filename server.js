@@ -125,6 +125,7 @@ var htmltemplate = `
   <h3 style ="text-align: center;"> 
      ${heading} 
   </h3> 
+  <hr/>
   <div> 
     ${date.toDateString()} 
   </div> 
