@@ -121,7 +121,7 @@ var htmltemplate = `
                 <li><a href ="https://opensource.com/resources/what-open-source">Open source technologies</a>
             </ul>
         </div> 
-  <hr/> 
+  
   <h3 style ="text-align: center;"> 
      ${heading} 
   </h3> 
